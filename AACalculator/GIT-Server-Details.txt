@@ -1,0 +1,12 @@
+
+==== GIT SERVER ====
+ https://github.com/
+ https://github.com/TriveniCYR/triveniApps.git
+ 
+==== GIT Login Credentials ====
+ UserName : TriveniCYR
+ PSWD  : pass123!@#
+ 
+===== Application Pool =======
+ https://github.com/TriveniCYR/triveniApps/AACalculator
+ 
