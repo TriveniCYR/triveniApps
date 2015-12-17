@@ -1,0 +1,14 @@
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.Common\bin\Debug\AACalc.Common.dll
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.Common\bin\Debug\AACalc.Common.pdb
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.Common\obj\Debug\AACalc.Common.dll
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.Common\obj\Debug\AACalc.Common.pdb
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.Common\obj\Debug\AACalc.Common.csprojResolveAssemblyReference.cache
+E:\Live workspace\NEW AACalcuator\AACalc.Web\AACalc.Common\bin\Debug\AACalc.Common.dll
+E:\Live workspace\NEW AACalcuator\AACalc.Web\AACalc.Common\bin\Debug\AACalc.Common.pdb
+E:\Live workspace\NEW AACalcuator\AACalc.Web\AACalc.Common\obj\Debug\AACalc.Common.dll
+E:\Live workspace\NEW AACalcuator\AACalc.Web\AACalc.Common\obj\Debug\AACalc.Common.pdb
+E:\Live workspace\NEW AACalcuator\AACalc.Web\AACalc.Common\obj\Debug\AACalc.Common.csprojResolveAssemblyReference.cache
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.Common\bin\Debug\AACalc.Common.dll
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.Common\bin\Debug\AACalc.Common.pdb
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.Common\obj\Debug\AACalc.Common.dll
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.Common\obj\Debug\AACalc.Common.pdb

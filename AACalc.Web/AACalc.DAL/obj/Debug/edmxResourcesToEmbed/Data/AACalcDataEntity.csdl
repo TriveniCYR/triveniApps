@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AACalculatorModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="AACalculatorEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tblAddresses" EntityType="AACalculatorModel.tblAddress" />
+    <EntitySet Name="tblCities" EntityType="AACalculatorModel.tblCity" />
+    <EntitySet Name="tblCountries" EntityType="AACalculatorModel.tblCountry" />
+    <EntitySet Name="tblEquipments" EntityType="AACalculatorModel.tblEquipment" />
+    <EntitySet Name="tblEquipmentSeats" EntityType="AACalculatorModel.tblEquipmentSeat" />
+    <EntitySet Name="tblMenus" EntityType="AACalculatorModel.tblMenu" />
+    <EntitySet Name="tblPersons" EntityType="AACalculatorModel.tblPerson" />
+    <EntitySet Name="tblPersonFinancials" EntityType="AACalculatorModel.tblPersonFinancial" />
+    <EntitySet Name="tblRoles" EntityType="AACalculatorModel.tblRole" />
+    <EntitySet Name="tblRoleMenus" EntityType="AACalculatorModel.tblRoleMenu" />
+    <EntitySet Name="tblSeats" EntityType="AACalculatorModel.tblSeat" />
+    <EntitySet Name="tblStates" EntityType="AACalculatorModel.tblState" />
+    <EntitySet Name="tblUsers" EntityType="AACalculatorModel.tblUser" />
+    <EntitySet Name="UserMenus" EntityType="AACalculatorModel.UserMenu" />
+    <AssociationSet Name="FK_RoleMenu_Menu" Association="AACalculatorModel.FK_RoleMenu_Menu">
+      <End Role="tblMenu" EntitySet="tblMenus" />
+      <End Role="tblRoleMenu" EntitySet="tblRoleMenus" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="tblAddress">
+    <Key>
+      <PropertyRef Name="AddressId" />
+    </Key>
+    <Property Name="AddressId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PersonId" Type="Int32" Nullable="false" />
+    <Property Name="AddressLine1" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AddressLine2" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="City" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="StateId" Type="Int32" Nullable="false" />
+    <Property Name="ZipCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="HomePhone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MobilePhone" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Fax" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="UpdatedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tblCity">
+    <Key>
+      <PropertyRef Name="CityId" />
+    </Key>
+    <Property Name="CityId" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="StateId" Type="Int32" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="tblCountry">
+    <Key>
+      <PropertyRef Name="CountryId" />
+    </Key>
+    <Property Name="CountryId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tblEquipment">
+    <Key>
+      <PropertyRef Name="EquipmentId" />
+    </Key>
+    <Property Name="EquipmentId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="UpdatedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tblEquipmentSeat">
+    <Key>
+      <PropertyRef Name="EquipmentSeatId" />
+    </Key>
+    <Property Name="EquipmentSeatId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EquipmentId" Type="Int32" />
+    <Property Name="SeatId" Type="Int32" />
+    <Property Name="Year" Type="Int32" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="UpdatedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tblMenu">
+    <Key>
+      <PropertyRef Name="MenuId" />
+    </Key>
+    <Property Name="MenuId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Url" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="DisplayOrder" Type="Int32" Nullable="false" />
+    <Property Name="CssClass" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tblRoleMenus" Relationship="AACalculatorModel.FK_RoleMenu_Menu" FromRole="tblMenu" ToRole="tblRoleMenu" />
+  </EntityType>
+  <EntityType Name="tblPerson">
+    <Key>
+      <PropertyRef Name="PersonId" />
+    </Key>
+    <Property Name="PersonId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="LastName" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="DOB" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="SpouseFirstName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="SpouseLastName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="SpouseDOB" Type="DateTime" Precision="0" />
+    <Property Name="EquipmentID" Type="Int32" Nullable="false" />
+    <Property Name="SeatId" Type="Int32" Nullable="false" />
+    <Property Name="YearOfCreditService" Type="Int32" />
+    <Property Name="AveFlyHours" Type="Int32" Nullable="false" />
+    <Property Name="AltRetireDate" Type="DateTime" Precision="0" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="UpdatedBy" Type="Int32" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tblPersonFinancial">
+    <Key>
+      <PropertyRef Name="FinancialId" />
+    </Key>
+    <Property Name="FinancialId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CustomerId" Type="Int32" Nullable="false" />
+    <Property Name="Balance401KAmount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CompanyContributionAmount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ProjectedRetuPer" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="OtherIRAbalanceAmount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="AnnualIRAContributionAmount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="FundAnnuityAmount" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="WithdrawRatePer" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SSBeniftAmount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SpouseSSBenifitAmount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SSProjAge" Type="Int32" />
+    <Property Name="SSSpouseProjAge" Type="Int32" />
+    <Property Name="Spouse401kBalance" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SpouseIRABalance" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SpouseAnnualIRAProjAmount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TaxableAccountBal" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="MilitarySurvivorAnnuity" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="MilitaryAnnuity" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TaxableAccountContributions" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SpouseAnnuityAmount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="UpdatedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tblRole">
+    <Key>
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="RoleId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tblRoleMenu">
+    <Key>
+      <PropertyRef Name="RoleMenuId" />
+    </Key>
+    <Property Name="RoleMenuId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RoleId" Type="Int32" Nullable="false" />
+    <Property Name="MenuId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="tblMenu" Relationship="AACalculatorModel.FK_RoleMenu_Menu" FromRole="tblRoleMenu" ToRole="tblMenu" />
+  </EntityType>
+  <EntityType Name="tblSeat">
+    <Key>
+      <PropertyRef Name="SeatId" />
+    </Key>
+    <Property Name="SeatId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SeatCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="UpdatedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tblState">
+    <Key>
+      <PropertyRef Name="StateId" />
+    </Key>
+    <Property Name="StateId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="StateCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CountryId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="tblUser">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="LastName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="FullName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Role" Type="Int32" Nullable="false" />
+    <Property Name="LastLoginDate" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="UserMenu">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="UserName" />
+      <PropertyRef Name="RoleName" />
+      <PropertyRef Name="RoleId" />
+      <PropertyRef Name="MenuId" />
+      <PropertyRef Name="RoleMenuId" />
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="Url" />
+      <PropertyRef Name="DisplayOrder" />
+      <PropertyRef Name="CssClass" />
+    </Key>
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RoleName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RoleId" Type="Int32" Nullable="false" />
+    <Property Name="MenuId" Type="Int32" Nullable="false" />
+    <Property Name="RoleMenuId" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Url" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="DisplayOrder" Type="Int32" Nullable="false" />
+    <Property Name="CssClass" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <Association Name="FK_RoleMenu_Menu">
+    <End Type="AACalculatorModel.tblMenu" Role="tblMenu" Multiplicity="1" />
+    <End Type="AACalculatorModel.tblRoleMenu" Role="tblRoleMenu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblMenu">
+        <PropertyRef Name="MenuId" />
+      </Principal>
+      <Dependent Role="tblRoleMenu">
+        <PropertyRef Name="MenuId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

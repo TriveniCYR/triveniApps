@@ -1,0 +1,25 @@
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.DAL\bin\Debug\AACalc.DAL.dll
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.DAL\bin\Debug\AACalc.DAL.pdb
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.DAL\obj\Debug\AACalc.DAL.dll
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.DAL\obj\Debug\AACalc.DAL.pdb
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.DAL\bin\Debug\AACalc.DAL.dll.config
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.DAL\bin\Debug\EntityFramework.dll
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.DAL\bin\Debug\EntityFramework.SqlServer.dll
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.DAL\bin\Debug\EntityFramework.xml
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.DAL\bin\Debug\EntityFramework.SqlServer.xml
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.DAL\obj\Debug\AACalc.DataAccess.csprojResolveAssemblyReference.cache
+E:\Live workspace\NEW AACalcuator\AACalc.Web\AACalc.DAL\bin\Debug\AACalc.DAL.dll.config
+E:\Live workspace\NEW AACalcuator\AACalc.Web\AACalc.DAL\bin\Debug\AACalc.DAL.dll
+E:\Live workspace\NEW AACalcuator\AACalc.Web\AACalc.DAL\bin\Debug\AACalc.DAL.pdb
+E:\Live workspace\NEW AACalcuator\AACalc.Web\AACalc.DAL\obj\Debug\AACalc.DAL.dll
+E:\Live workspace\NEW AACalcuator\AACalc.Web\AACalc.DAL\obj\Debug\AACalc.DAL.pdb
+E:\Live workspace\NEW AACalcuator\AACalc.Web\AACalc.DAL\obj\Debug\AACalc.DataAccess.csprojResolveAssemblyReference.cache
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.DAL\bin\Debug\AACalc.DAL.dll.config
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.DAL\bin\Debug\AACalc.DAL.dll
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.DAL\bin\Debug\AACalc.DAL.pdb
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.DAL\bin\Debug\EntityFramework.dll
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.DAL\bin\Debug\EntityFramework.SqlServer.dll
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.DAL\bin\Debug\EntityFramework.xml
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.DAL\bin\Debug\EntityFramework.SqlServer.xml
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.DAL\obj\Debug\AACalc.DAL.dll
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.DAL\obj\Debug\AACalc.DAL.pdb

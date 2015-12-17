@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap Tabs</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <style type="text/css">
+        .bs-example {
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+            <h1>Add New Person</h1>
+            <ol class="breadcrumb">
+                <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+                <li class="active">Add New Person</li>
+            </ol>
+        </section>
+
+        <div class="bs-example">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#sectionA">Person</a></li>
+                <li><a data-toggle="tab" href="#sectionB">Person Financial</a></li>
+                <li><a data-toggle="tab" href="#sectionC">Equipment</a> </li>
+            </ul>
+            <div class="tab-content">
+                <div id="sectionA" class="tab-pane fade in active">
+                    @{  Html.RenderPartial("_PersonPartial");    }
+                </div>
+                <div id="sectionB" class="tab-pane fade">
+                    <br />
+                    @{  Html.RenderPartial("_FinancialPartial");    }
+                </div>
+                <div id="sectionC" class="tab-pane fade">
+                    @{ Html.RenderPartial("_EquipmentsPartial");}
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>   

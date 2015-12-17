@@ -1,0 +1,22 @@
+﻿@if ((User as AACalc.Web.AuthenticationExt.Authentication) != null)
+{
+    var CurrentUser = (User as AACalc.Web.AuthenticationExt.Authentication).UserContext;
+    <!-- Navbar Right Menu -->
+    <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+            <li class="dropdown user user-menu">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <span class="hidden-xs">@CurrentUser.FullName</span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li class="user-header" style=" background-color: white;font-size: large; height: 44px;">Welcome : @CurrentUser.FullName</li>
+                    <li class="user-header">
+                        <a href="/Account/LogOff" class="btn btn-default">Sign out</a>
+                    </li>
+                </ul>
+                <input type="hidden" id="hdfuserId" value="@CurrentUser.UserId" />
+                <input type="hidden" id="hdfRoleId" value="@CurrentUser.RoleId" />
+                <input type="hidden" id="hdusername" value="@CurrentUser.UserName" />
+        </ul>
+    </div>
+}

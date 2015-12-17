@@ -1,0 +1,164 @@
+﻿@model AACalc.Entity.ViewModel.PersonFinancialViewModel
+
+<link href="~/Content/CustomeCSS/bootValidation.css" rel="stylesheet" />
+
+<div class="row">    
+    @*<form name="frmPersonFinancial" id="frmPersonFinancial" method="POST" action="/Home/AddPersonFinancial/" enctype="multipart/form-data">*@
+        <div class="col-xs-4 form-group">
+            <label class="control-label">401k balance</label>
+            <div class="input-group">
+                <span class="input-group-addon">$</span>
+               
+                @Html.TextBoxFor(m => m.Balance401KAmount, new { @class = "form-control"  })
+                
+            </div>
+        </div>
+        <div class="col-xs-4 form-group">
+            <label>Company Contributions</label>
+            <div class="input-group">
+                <span class="input-group-addon">%</span>
+               
+                @Html.TextBoxFor(m => m.CompanyContributionAmount, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="col-xs-4 form-group">
+            <label>Projected return on all investment accounts</label>
+            <div class="input-group">
+                <span class="input-group-addon">%</span>
+               
+                @Html.TextBoxFor(m => m.ProjectedRetuPer, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="col-xs-4 form-group">
+            <label>Other IRA Balances</label>
+            <div class="input-group">
+                <span class="input-group-addon">$</span>
+           
+                @Html.TextBoxFor(m => m.OtherIRAbalanceAmount, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="col-xs-4 form-group">
+            <label>Annual IRA Annual Contributions</label>
+            <div class="input-group">
+                <span class="input-group-addon">$</span>
+              
+                @Html.TextBoxFor(m => m.AnnualIRAContributionAmount, new { @class = "form-control" })
+            </div>
+        </div>
+        @*<div class="col-xs-4 form-group">
+                <label>Taxable Account Balances</label>
+                <div class="input-group">
+                    <span class="input-group-addon">$</span>
+                    <input type="number" class="form-control" id="txtTaxableaccountBal" />
+                </div>
+            </div>
+            <div class="col-xs-4 form-group">
+                <label>Taxable Account Contributions</label>
+                <div class="input-group">
+                    <span class="input-group-addon">$</span>
+                    <input type="number" class="form-control" id="txtTaxableaccountcontributions" />
+                </div>
+            </div>*@
+        <div class="col-xs-4 form-group">
+            <label>A Fund Annuity</label>
+            <div class="input-group">
+                <span class="input-group-addon">$</span>
+                @*<input type="number" class="form-control" id="txtFundAnnuityAmount" name="FundAnnuityAmount" />*@
+                @Html.TextBoxFor(m => m.FundAnnuityAmount, new { @class = "form-control" })
+            </div>
+        </div>
+        @*<div class="col-xs-4 form-group">
+                <label>Military Annuity</label>
+                <div class="input-group">
+                    <span class="input-group-addon">$</span>
+                    <input type="number" class="form-control" id="txtMilitaryAnnuity" />
+                </div>
+            </div>
+            <div class="col-xs-4 form-group">
+                <label>Military Survivor Annuity</label>
+                <div class="input-group">
+                    <span class="input-group-addon">$</span>
+                    <input type="number" class="form-control" id="txtMilitarySurvivorAnnuity" />
+                </div>
+            </div>*@
+        <div class="col-xs-4 form-group">
+            <label>Withdrawal rate on retirement assets</label>
+            <div class="input-group">
+                <span class="input-group-addon">%</span>
+               
+                @Html.TextBoxFor(m => m.WithdrawRatePer, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="col-xs-4 form-group">
+            <label>Social Security Full benefit</label>
+            <div class="input-group">
+                <span class="input-group-addon">$</span>
+               
+                @Html.TextBoxFor(m => m.SSBeniftAmount, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="col-xs-4 form-group">
+            <label>Spouse Social Security full benefit</label>
+            <div class="input-group">
+                <span class="input-group-addon"></span>
+              
+                @Html.TextBoxFor(m => m.SpouseSSBenifitAmount, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="col-xs-4 form-group">
+            <label>Projected Social Security age</label>
+            <div class="input-group">
+                <span class="input-group-addon"></span>
+               
+                @Html.TextBoxFor(m => m.SSProjAge, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="col-xs-4 form-group">
+            <label>Projected Spouse Social Security age</label>
+            <div class="input-group">
+                <span class="input-group-addon"></span>
+                
+                @Html.TextBoxFor(m => m.SSSpouseProjAge, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="col-xs-4 form-group">
+            <label>Spouse 401k balance</label>
+            <div class="input-group">
+                <span class="input-group-addon">$</span>
+             
+                @Html.TextBoxFor(m => m.Spouse401kBalance, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="col-xs-4 form-group">
+            <label>spouse IRA balance</label>
+            <div class="input-group">
+                <span class="input-group-addon">$</span>
+               
+                @Html.TextBoxFor(m => m.SpouseIRABalance, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="col-xs-4 form-group">
+            <label>Spouse annual IRA projected contributions</label>
+            <div class="input-group">
+                <span class="input-group-addon">$</span>
+               
+                @Html.TextBoxFor(m => m.SpouseAnnualIRAProjAmount, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="col-xs-4 form-group">
+            <label>Spouse Annuity</label>
+            <div class="input-group">
+                <span class="input-group-addon">$</span>
+              
+                @Html.TextBoxFor(m => m.SpouseAnnuityAmount, new { @class = "form-control" })
+            </div>
+        </div>
+       
+    @*</form>*@
+
+</div>
+
+@*<script src="~/Content/CustomeJS/moment-with-locales.js"></script>
+<script src="~/Content/CustomeJS/formValidation.min.js"></script>
+<script src="~/Content/CustomeJS/validationbootstrap.js"></script>
+<script src="~/Content/CustomeJS/CustomeValidation.js"></script>*@

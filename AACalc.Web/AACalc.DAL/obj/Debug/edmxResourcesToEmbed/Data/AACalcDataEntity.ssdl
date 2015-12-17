@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AACalculatorModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tblAddress">
+    <Key>
+      <PropertyRef Name="AddressId" />
+    </Key>
+    <Property Name="AddressId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PersonId" Type="int" Nullable="false" />
+    <Property Name="AddressLine1" Type="varchar(max)" />
+    <Property Name="AddressLine2" Type="varchar(max)" />
+    <Property Name="City" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="StateId" Type="int" Nullable="false" />
+    <Property Name="ZipCode" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="HomePhone" Type="varchar" MaxLength="50" />
+    <Property Name="MobilePhone" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="200" />
+    <Property Name="Fax" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="UpdatedBy" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="UpdatedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblCity">
+    <Key>
+      <PropertyRef Name="CityId" />
+    </Key>
+    <Property Name="CityId" Type="int" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="200" />
+    <Property Name="StateId" Type="int" />
+    <Property Name="CreatedBy" Type="int" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblCountry">
+    <Key>
+      <PropertyRef Name="CountryId" />
+    </Key>
+    <Property Name="CountryId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="tblEquipment">
+    <Key>
+      <PropertyRef Name="EquipmentId" />
+    </Key>
+    <Property Name="EquipmentId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nchar" MaxLength="10" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="UpdatedBy" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="UpdatedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblEquipmentSeat">
+    <Key>
+      <PropertyRef Name="EquipmentSeatId" />
+    </Key>
+    <Property Name="EquipmentSeatId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EquipmentId" Type="int" />
+    <Property Name="SeatId" Type="int" />
+    <Property Name="Year" Type="int" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="UpdatedBy" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="UpdatedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblMenu">
+    <Key>
+      <PropertyRef Name="MenuId" />
+    </Key>
+    <Property Name="MenuId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="Url" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="DisplayOrder" Type="int" Nullable="false" />
+    <Property Name="CssClass" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblPerson">
+    <Key>
+      <PropertyRef Name="PersonId" />
+    </Key>
+    <Property Name="PersonId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="LastName" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="DOB" Type="date" Nullable="false" />
+    <Property Name="SpouseFirstName" Type="varchar" MaxLength="200" />
+    <Property Name="SpouseLastName" Type="varchar" MaxLength="200" />
+    <Property Name="SpouseDOB" Type="date" />
+    <Property Name="EquipmentID" Type="int" Nullable="false" />
+    <Property Name="SeatId" Type="int" Nullable="false" />
+    <Property Name="YearOfCreditService" Type="int" />
+    <Property Name="AveFlyHours" Type="int" Nullable="false" />
+    <Property Name="AltRetireDate" Type="date" />
+    <Property Name="CreatedBy" Type="int" Nullable="false" />
+    <Property Name="UpdatedBy" Type="int" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="UpdatedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblPersonFinancial">
+    <Key>
+      <PropertyRef Name="FinancialId" />
+    </Key>
+    <Property Name="FinancialId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CustomerId" Type="int" Nullable="false" />
+    <Property Name="Balance401KAmount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CompanyContributionAmount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="ProjectedRetuPer" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="OtherIRAbalanceAmount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="AnnualIRAContributionAmount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="FundAnnuityAmount" Type="nchar" MaxLength="10" />
+    <Property Name="WithdrawRatePer" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SSBeniftAmount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SpouseSSBenifitAmount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SSProjAge" Type="int" />
+    <Property Name="SSSpouseProjAge" Type="int" />
+    <Property Name="Spouse401kBalance" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SpouseIRABalance" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SpouseAnnualIRAProjAmount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="TaxableAccountBal" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="MilitarySurvivorAnnuity" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="MilitaryAnnuity" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="TaxableAccountContributions" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SpouseAnnuityAmount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="UpdatedBy" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="UpdatedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblRole">
+    <Key>
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="RoleId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblRoleMenu">
+    <Key>
+      <PropertyRef Name="RoleMenuId" />
+    </Key>
+    <Property Name="RoleMenuId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RoleId" Type="int" Nullable="false" />
+    <Property Name="MenuId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblSeat">
+    <Key>
+      <PropertyRef Name="SeatId" />
+    </Key>
+    <Property Name="SeatId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SeatCode" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="UpdatedBy" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="UpdatedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblState">
+    <Key>
+      <PropertyRef Name="StateId" />
+    </Key>
+    <Property Name="StateId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="200" />
+    <Property Name="StateCode" Type="varchar" MaxLength="50" />
+    <Property Name="CountryId" Type="int" />
+  </EntityType>
+  <EntityType Name="tblUser">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="varchar" MaxLength="100" />
+    <Property Name="LastName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="FullName" Type="varchar" MaxLength="200" />
+    <Property Name="UserName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Role" Type="int" Nullable="false" />
+    <Property Name="LastLoginDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'AACalculator.dbo.UserMenu' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="UserMenu">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="UserName" />
+      <PropertyRef Name="RoleName" />
+      <PropertyRef Name="RoleId" />
+      <PropertyRef Name="MenuId" />
+      <PropertyRef Name="RoleMenuId" />
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="Url" />
+      <PropertyRef Name="DisplayOrder" />
+      <PropertyRef Name="CssClass" />
+    </Key>
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="UserName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="RoleName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="RoleId" Type="int" Nullable="false" />
+    <Property Name="MenuId" Type="int" Nullable="false" />
+    <Property Name="RoleMenuId" Type="int" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="Url" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="DisplayOrder" Type="int" Nullable="false" />
+    <Property Name="CssClass" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_RoleMenu_Menu">
+    <End Role="tblMenu" Type="Self.tblMenu" Multiplicity="1" />
+    <End Role="tblRoleMenu" Type="Self.tblRoleMenu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblMenu">
+        <PropertyRef Name="MenuId" />
+      </Principal>
+      <Dependent Role="tblRoleMenu">
+        <PropertyRef Name="MenuId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="AACalculatorModelStoreContainer">
+    <EntitySet Name="tblAddress" EntityType="Self.tblAddress" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblCity" EntityType="Self.tblCity" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblCountry" EntityType="Self.tblCountry" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblEquipment" EntityType="Self.tblEquipment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblEquipmentSeat" EntityType="Self.tblEquipmentSeat" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblMenu" EntityType="Self.tblMenu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblPerson" EntityType="Self.tblPerson" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblPersonFinancial" EntityType="Self.tblPersonFinancial" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblRole" EntityType="Self.tblRole" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblRoleMenu" EntityType="Self.tblRoleMenu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblSeat" EntityType="Self.tblSeat" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblState" EntityType="Self.tblState" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblUser" EntityType="Self.tblUser" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserMenu" EntityType="Self.UserMenu" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [UserMenu].[UserId] AS [UserId], 
+    [UserMenu].[UserName] AS [UserName], 
+    [UserMenu].[RoleName] AS [RoleName], 
+    [UserMenu].[RoleId] AS [RoleId], 
+    [UserMenu].[MenuId] AS [MenuId], 
+    [UserMenu].[RoleMenuId] AS [RoleMenuId], 
+    [UserMenu].[Name] AS [Name], 
+    [UserMenu].[Url] AS [Url], 
+    [UserMenu].[DisplayOrder] AS [DisplayOrder], 
+    [UserMenu].[CssClass] AS [CssClass]
+    FROM [dbo].[UserMenu] AS [UserMenu]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_RoleMenu_Menu" Association="Self.FK_RoleMenu_Menu">
+      <End Role="tblMenu" EntitySet="tblMenu" />
+      <End Role="tblRoleMenu" EntitySet="tblRoleMenu" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

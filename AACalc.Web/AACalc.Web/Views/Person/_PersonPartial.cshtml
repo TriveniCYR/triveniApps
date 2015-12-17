@@ -1,0 +1,213 @@
+﻿@model AACalc.Entity.ViewModel.PersonViewModel
+
+<style>
+    legend {
+        font-size: 16px !important;
+    }
+</style>
+<div class="row">
+    <br />
+    
+        <fieldset class=" the-fieldset">
+            <legend class="the-legend">Personal Information</legend>
+            <div class="col-xs-12 form-group">
+                <div class="col-xs-4 form-group">
+                    <label class="control-label"> First Name</label>
+                    <div class="input-group">
+                        <span class="input-group-addon"></span>
+                       
+                        @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control" })                    
+                    </div>
+                </div>
+                <div class="col-xs-4 form-group">
+                    <label class="control-label">Last Name</label>
+                    <div class="input-group">
+                        <span class="input-group-addon"></span>
+                      
+                        @Html.TextBoxFor(m => m.LastName, new { @class = "form-control" })
+                        
+                    </div>
+                </div>
+                <div class="col-xs-4 form-group">
+                    <label class="control-label">Date Of Birth</label>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                      
+                        @Html.TextBoxFor(m => m.DOB, new { @class = "form-control" , type="date" })
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 form-group">
+                <div class="col-xs-4 form-group">
+                    <label class="control-label"> Spouse First Name</label>
+                    <div class="input-group">
+                        <span class="input-group-addon"></span>
+                        
+                        @Html.TextBoxFor(m => m.SpouseFirstName, new { @class = "form-control" })
+                    </div>
+                </div>
+                <div class="col-xs-4 form-group">
+                    <label class="control-label">Spouse Last Name</label>
+                    <div class="input-group">
+                        <span class="input-group-addon"></span>
+                       
+                        @Html.TextBoxFor(m => m.SpouseLastName, new { @class = "form-control" })
+                    </div>
+                </div>
+                <div class="col-xs-4 form-group">
+                    <label class="control-label">Spouse Date of Birth</label>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                       
+                        @Html.TextBoxFor(m => m.SpouseDOB, new { @class = "form-control", type = "date" })
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 form-group">
+                <div class="col-xs-4 form-group">
+                    <label class="control-label"> Seat Id</label>
+                    <div class="input-group">
+                        <span class="input-group-addon"></span>
+                        <select class="form-control" id="dropSeatId" name="SeatId">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-xs-4 form-group">
+                    <label class="control-label">Equipment</label>
+                    <div class="input-group">
+                        <span class="input-group-addon"></span>
+                        <select class="form-control" id="dropEquipmentID" name="EquipmentID">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 form-group">
+                <div class="col-xs-4 form-group">
+                    <label class="control-label"> Avg hours flown/month</label>
+                    <div class="input-group">
+                        <span class="input-group-addon"></span>
+                      
+                        @Html.TextBoxFor(m => m.AveFlyHours, new { @class = "form-control" })
+                    </div>
+                </div>
+                <div class="col-xs-4 form-group">
+                    <label class="control-label">Years of credited service</label>
+                    <div class="input-group">
+                        <span class="input-group-addon"></span>
+                        <input type="text" class="form-control" name="yrscreditedService"/>
+                    </div>
+                </div>
+                <div class="col-xs-4 form-group">
+                    <label class="control-label">Alternate retire date</label>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                     
+                        @Html.TextBoxFor(m => m.AltRetireDate, new { @class = "form-control", type = "date" })
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+        @*Contact info filedset*@
+        <fieldset class=" the-fieldset">
+            <legend class="the-legend">Contact Information</legend>
+            <div class="col-xs-12 form-group">
+                <div class="col-xs-4 form-group">
+                    <label class="control-label">Address Line 1 </label>
+                    <div class="input-group">
+                        <span class="input-group-addon"></span>
+                       
+                        @Html.TextBoxFor(m => m.AddressLine1, new { @class = "form-control" })
+                    </div>
+                </div>
+                <div class="col-xs-4 form-group">
+                    <label class="control-label">Address Line 2</label>
+                    <div class="input-group">
+                        <span class="input-group-addon"></span>
+                       
+                        @Html.TextBoxFor(m => m.AddressLine2, new { @class = "form-control" })
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 form-group">
+                <div class="col-xs-4 form-group">
+                    <label class="control-label">City </label>
+                    <div class="input-group">
+                        <span class="input-group-addon"></span>
+                        <select class="form-control" id="dropCity" name="City">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-xs-4 form-group">
+                    <label class="control-label">State</label>
+                    <div class="input-group">
+                        <span class="input-group-addon"></span>
+                        <select class="form-control" id="dropStateId" name="StateId">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-xs-4 form-group">
+                    <label class="control-label">Zip Code</label>
+                    <div class="input-group">
+                        <span class="input-group-addon"></span>
+                     
+                        @Html.TextBoxFor(m => m.ZipCode, new { @class = "form-control" })
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 form-group">
+                <div class="col-xs-4 form-group">
+                    <label class="control-label">Home Phone </label>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-phone-alt"></i></span>
+                      
+                        @Html.TextBoxFor(m => m.HomePhone, new { @class = "form-control" })
+                    </div>
+                </div>
+                <div class="col-xs-4 form-group">
+                    <label class="control-label">Mobile Phone</label>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
+                     
+                        @Html.TextBoxFor(m => m.MobilePhone, new { @class = "form-control" })
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 form-group">
+                <div class="col-xs-4 form-group">
+                    <label class="control-label">Email Id </label>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                       
+                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control", type = "email" })
+                    </div>
+                </div>
+                <div class="col-xs-4 form-group">
+                    <label class="control-label">Fax</label>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-print"></i></span>
+                       
+                        @Html.TextBoxFor(m => m.Fax, new { @class = "form-control" })
+                    </div>
+                </div>
+            </div>
+           
+        </fieldset>
+    
+</div>

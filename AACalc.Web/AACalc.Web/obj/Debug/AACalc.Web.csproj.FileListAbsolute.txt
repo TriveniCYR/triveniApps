@@ -1,0 +1,189 @@
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.Web\obj\Debug\AACalc.Web.csprojResolveAssemblyReference.cache
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.Web\bin\AACalc.Web.dll.config
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.Web\bin\AACalc.Web.dll
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.Web\bin\AACalc.Web.pdb
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.Web\bin\AACalc.BAL.dll
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.Web\bin\AACalc.Common.dll
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.Web\bin\AACalc.Entity.dll
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.Web\bin\Antlr3.Runtime.dll
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.Web\bin\EntityFramework.dll
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.Web\bin\EntityFramework.SqlServer.dll
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.Web\bin\Microsoft.AspNet.Identity.Core.dll
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.Web\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.Web\bin\Microsoft.AspNet.Identity.Owin.dll
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.Web\bin\Microsoft.Owin.dll
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.Web\bin\Microsoft.Owin.Host.SystemWeb.dll
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.Web\bin\Microsoft.Owin.Security.Cookies.dll
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.Web\bin\Microsoft.Owin.Security.dll
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.Web\bin\Microsoft.Owin.Security.Facebook.dll
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.Web\bin\Microsoft.Owin.Security.Google.dll
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.Web\bin\Microsoft.Owin.Security.OAuth.dll
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.Web\bin\Microsoft.Owin.Security.Twitter.dll
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.Web\bin\Microsoft.Web.Infrastructure.dll
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.Web\bin\Newtonsoft.Json.dll
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.Web\bin\Owin.dll
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.Web\bin\System.Web.Helpers.dll
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.Web\bin\System.Web.Mvc.dll
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.Web\bin\System.Web.Optimization.dll
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.Web\bin\System.Web.Razor.dll
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.Web\bin\System.Web.WebPages.Deployment.dll
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.Web\bin\System.Web.WebPages.dll
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.Web\bin\System.Web.WebPages.Razor.dll
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.Web\bin\WebGrease.dll
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.Web\bin\AACalc.BAL.pdb
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.Web\bin\AACalc.Common.pdb
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.Web\bin\AACalc.Entity.pdb
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.Web\bin\System.Web.Helpers.xml
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.Web\bin\System.Web.Mvc.xml
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.Web\bin\System.Web.Optimization.xml
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.Web\bin\System.Web.Razor.xml
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.Web\bin\System.Web.WebPages.xml
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.Web\bin\System.Web.WebPages.Deployment.xml
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.Web\bin\System.Web.WebPages.Razor.xml
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.Web\bin\Newtonsoft.Json.xml
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.Web\bin\Antlr3.Runtime.pdb
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.Web\bin\EntityFramework.xml
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.Web\bin\EntityFramework.SqlServer.xml
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.Web\bin\Microsoft.AspNet.Identity.Core.xml
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.Web\bin\Microsoft.AspNet.Identity.Owin.xml
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.Web\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.Web\bin\Microsoft.Owin.xml
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.Web\bin\Microsoft.Owin.Host.SystemWeb.xml
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.Web\bin\Microsoft.Owin.Security.xml
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.Web\bin\Microsoft.Owin.Security.Facebook.xml
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.Web\bin\Microsoft.Owin.Security.Cookies.xml
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.Web\bin\Microsoft.Owin.Security.OAuth.xml
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.Web\bin\Microsoft.Owin.Security.Google.xml
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.Web\bin\Microsoft.Owin.Security.Twitter.xml
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.Web\obj\Debug\AACalc.Web.dll
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.Web\obj\Debug\AACalc.Web.pdb
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.Web\bin\AACalc.DAL.dll
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.Web\bin\AACalc.DAL.pdb
+E:\Live workspace\NEW AACalcuator\AACalc.Web\AACalc.Web\obj\Debug\AACalc.Web.csprojResolveAssemblyReference.cache
+E:\Live workspace\NEW AACalcuator\AACalc.Web\AACalc.Web\bin\AACalc.Web.dll.config
+E:\Live workspace\NEW AACalcuator\AACalc.Web\AACalc.Web\bin\AACalc.Web.dll
+E:\Live workspace\NEW AACalcuator\AACalc.Web\AACalc.Web\bin\AACalc.Web.pdb
+E:\Live workspace\NEW AACalcuator\AACalc.Web\AACalc.Web\bin\AACalc.BAL.dll
+E:\Live workspace\NEW AACalcuator\AACalc.Web\AACalc.Web\bin\AACalc.Common.dll
+E:\Live workspace\NEW AACalcuator\AACalc.Web\AACalc.Web\bin\AACalc.Entity.dll
+E:\Live workspace\NEW AACalcuator\AACalc.Web\AACalc.Web\bin\Antlr3.Runtime.dll
+E:\Live workspace\NEW AACalcuator\AACalc.Web\AACalc.Web\bin\EntityFramework.dll
+E:\Live workspace\NEW AACalcuator\AACalc.Web\AACalc.Web\bin\EntityFramework.SqlServer.dll
+E:\Live workspace\NEW AACalcuator\AACalc.Web\AACalc.Web\bin\Microsoft.AspNet.Identity.Core.dll
+E:\Live workspace\NEW AACalcuator\AACalc.Web\AACalc.Web\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\Live workspace\NEW AACalcuator\AACalc.Web\AACalc.Web\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\Live workspace\NEW AACalcuator\AACalc.Web\AACalc.Web\bin\Microsoft.Owin.dll
+E:\Live workspace\NEW AACalcuator\AACalc.Web\AACalc.Web\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\Live workspace\NEW AACalcuator\AACalc.Web\AACalc.Web\bin\Microsoft.Owin.Security.Cookies.dll
+E:\Live workspace\NEW AACalcuator\AACalc.Web\AACalc.Web\bin\Microsoft.Owin.Security.dll
+E:\Live workspace\NEW AACalcuator\AACalc.Web\AACalc.Web\bin\Microsoft.Owin.Security.Facebook.dll
+E:\Live workspace\NEW AACalcuator\AACalc.Web\AACalc.Web\bin\Microsoft.Owin.Security.Google.dll
+E:\Live workspace\NEW AACalcuator\AACalc.Web\AACalc.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\Live workspace\NEW AACalcuator\AACalc.Web\AACalc.Web\bin\Microsoft.Owin.Security.OAuth.dll
+E:\Live workspace\NEW AACalcuator\AACalc.Web\AACalc.Web\bin\Microsoft.Owin.Security.Twitter.dll
+E:\Live workspace\NEW AACalcuator\AACalc.Web\AACalc.Web\bin\Microsoft.Web.Infrastructure.dll
+E:\Live workspace\NEW AACalcuator\AACalc.Web\AACalc.Web\bin\Newtonsoft.Json.dll
+E:\Live workspace\NEW AACalcuator\AACalc.Web\AACalc.Web\bin\Owin.dll
+E:\Live workspace\NEW AACalcuator\AACalc.Web\AACalc.Web\bin\System.Web.Helpers.dll
+E:\Live workspace\NEW AACalcuator\AACalc.Web\AACalc.Web\bin\System.Web.Mvc.dll
+E:\Live workspace\NEW AACalcuator\AACalc.Web\AACalc.Web\bin\System.Web.Optimization.dll
+E:\Live workspace\NEW AACalcuator\AACalc.Web\AACalc.Web\bin\System.Web.Razor.dll
+E:\Live workspace\NEW AACalcuator\AACalc.Web\AACalc.Web\bin\System.Web.WebPages.Deployment.dll
+E:\Live workspace\NEW AACalcuator\AACalc.Web\AACalc.Web\bin\System.Web.WebPages.dll
+E:\Live workspace\NEW AACalcuator\AACalc.Web\AACalc.Web\bin\System.Web.WebPages.Razor.dll
+E:\Live workspace\NEW AACalcuator\AACalc.Web\AACalc.Web\bin\WebGrease.dll
+E:\Live workspace\NEW AACalcuator\AACalc.Web\AACalc.Web\bin\AACalc.DAL.dll
+E:\Live workspace\NEW AACalcuator\AACalc.Web\AACalc.Web\bin\AACalc.BAL.pdb
+E:\Live workspace\NEW AACalcuator\AACalc.Web\AACalc.Web\bin\AACalc.Common.pdb
+E:\Live workspace\NEW AACalcuator\AACalc.Web\AACalc.Web\bin\AACalc.Entity.pdb
+E:\Live workspace\NEW AACalcuator\AACalc.Web\AACalc.Web\bin\System.Web.Helpers.xml
+E:\Live workspace\NEW AACalcuator\AACalc.Web\AACalc.Web\bin\System.Web.Mvc.xml
+E:\Live workspace\NEW AACalcuator\AACalc.Web\AACalc.Web\bin\System.Web.Optimization.xml
+E:\Live workspace\NEW AACalcuator\AACalc.Web\AACalc.Web\bin\System.Web.Razor.xml
+E:\Live workspace\NEW AACalcuator\AACalc.Web\AACalc.Web\bin\System.Web.WebPages.xml
+E:\Live workspace\NEW AACalcuator\AACalc.Web\AACalc.Web\bin\System.Web.WebPages.Deployment.xml
+E:\Live workspace\NEW AACalcuator\AACalc.Web\AACalc.Web\bin\System.Web.WebPages.Razor.xml
+E:\Live workspace\NEW AACalcuator\AACalc.Web\AACalc.Web\bin\Newtonsoft.Json.xml
+E:\Live workspace\NEW AACalcuator\AACalc.Web\AACalc.Web\bin\Antlr3.Runtime.pdb
+E:\Live workspace\NEW AACalcuator\AACalc.Web\AACalc.Web\bin\EntityFramework.xml
+E:\Live workspace\NEW AACalcuator\AACalc.Web\AACalc.Web\bin\EntityFramework.SqlServer.xml
+E:\Live workspace\NEW AACalcuator\AACalc.Web\AACalc.Web\bin\Microsoft.AspNet.Identity.Core.xml
+E:\Live workspace\NEW AACalcuator\AACalc.Web\AACalc.Web\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\Live workspace\NEW AACalcuator\AACalc.Web\AACalc.Web\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\Live workspace\NEW AACalcuator\AACalc.Web\AACalc.Web\bin\Microsoft.Owin.xml
+E:\Live workspace\NEW AACalcuator\AACalc.Web\AACalc.Web\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\Live workspace\NEW AACalcuator\AACalc.Web\AACalc.Web\bin\Microsoft.Owin.Security.xml
+E:\Live workspace\NEW AACalcuator\AACalc.Web\AACalc.Web\bin\Microsoft.Owin.Security.Facebook.xml
+E:\Live workspace\NEW AACalcuator\AACalc.Web\AACalc.Web\bin\Microsoft.Owin.Security.Cookies.xml
+E:\Live workspace\NEW AACalcuator\AACalc.Web\AACalc.Web\bin\Microsoft.Owin.Security.OAuth.xml
+E:\Live workspace\NEW AACalcuator\AACalc.Web\AACalc.Web\bin\Microsoft.Owin.Security.Google.xml
+E:\Live workspace\NEW AACalcuator\AACalc.Web\AACalc.Web\bin\Microsoft.Owin.Security.Twitter.xml
+E:\Live workspace\NEW AACalcuator\AACalc.Web\AACalc.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\Live workspace\NEW AACalcuator\AACalc.Web\AACalc.Web\bin\AACalc.DAL.pdb
+E:\Live workspace\NEW AACalcuator\AACalc.Web\AACalc.Web\obj\Debug\AACalc.Web.dll
+E:\Live workspace\NEW AACalcuator\AACalc.Web\AACalc.Web\obj\Debug\AACalc.Web.pdb
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.Web\bin\AACalc.Web.dll.config
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.Web\bin\AACalc.Web.dll
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.Web\bin\AACalc.Web.pdb
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.Web\bin\AACalc.BAL.dll
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.Web\bin\AACalc.Common.dll
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.Web\bin\AACalc.Entity.dll
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.Web\bin\Antlr3.Runtime.dll
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.Web\bin\EntityFramework.dll
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.Web\bin\EntityFramework.SqlServer.dll
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.Web\bin\Microsoft.AspNet.Identity.Core.dll
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.Web\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.Web\bin\Microsoft.AspNet.Identity.Owin.dll
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.Web\bin\Microsoft.Owin.dll
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.Web\bin\Microsoft.Owin.Host.SystemWeb.dll
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.Web\bin\Microsoft.Owin.Security.Cookies.dll
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.Web\bin\Microsoft.Owin.Security.dll
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.Web\bin\Microsoft.Owin.Security.Facebook.dll
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.Web\bin\Microsoft.Owin.Security.Google.dll
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.Web\bin\Microsoft.Owin.Security.OAuth.dll
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.Web\bin\Microsoft.Owin.Security.Twitter.dll
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.Web\bin\Microsoft.Web.Infrastructure.dll
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.Web\bin\Newtonsoft.Json.dll
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.Web\bin\Owin.dll
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.Web\bin\System.Web.Helpers.dll
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.Web\bin\System.Web.Mvc.dll
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.Web\bin\System.Web.Optimization.dll
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.Web\bin\System.Web.Razor.dll
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.Web\bin\System.Web.WebPages.Deployment.dll
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.Web\bin\System.Web.WebPages.dll
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.Web\bin\System.Web.WebPages.Razor.dll
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.Web\bin\WebGrease.dll
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.Web\bin\AACalc.DAL.dll
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.Web\bin\AACalc.BAL.pdb
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.Web\bin\AACalc.Common.pdb
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.Web\bin\AACalc.Entity.pdb
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.Web\bin\System.Web.Helpers.xml
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.Web\bin\System.Web.Mvc.xml
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.Web\bin\System.Web.Optimization.xml
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.Web\bin\System.Web.Razor.xml
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.Web\bin\System.Web.WebPages.xml
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.Web\bin\System.Web.WebPages.Deployment.xml
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.Web\bin\System.Web.WebPages.Razor.xml
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.Web\bin\Newtonsoft.Json.xml
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.Web\bin\Antlr3.Runtime.pdb
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.Web\bin\EntityFramework.xml
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.Web\bin\EntityFramework.SqlServer.xml
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.Web\bin\Microsoft.AspNet.Identity.Core.xml
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.Web\bin\Microsoft.AspNet.Identity.Owin.xml
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.Web\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.Web\bin\Microsoft.Owin.xml
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.Web\bin\Microsoft.Owin.Host.SystemWeb.xml
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.Web\bin\Microsoft.Owin.Security.xml
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.Web\bin\Microsoft.Owin.Security.Facebook.xml
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.Web\bin\Microsoft.Owin.Security.Cookies.xml
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.Web\bin\Microsoft.Owin.Security.OAuth.xml
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.Web\bin\Microsoft.Owin.Security.Google.xml
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.Web\bin\Microsoft.Owin.Security.Twitter.xml
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.Web\bin\AACalc.DAL.pdb
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.Web\obj\Debug\AACalc.Web.csprojResolveAssemblyReference.cache
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.Web\obj\Debug\AACalc.Web.dll
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.Web\obj\Debug\AACalc.Web.pdb

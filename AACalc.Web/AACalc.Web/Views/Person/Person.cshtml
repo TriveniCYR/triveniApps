@@ -1,0 +1,893 @@
+﻿@model AACalc.Entity.ViewModel.ComplexViewModel
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Person</title>
+    @*<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">*@
+    <link href="~/Content/CustomeCSS/jquery.steps.css" rel="stylesheet" />
+    <script src="~/Content/CustomeJS/jquery.steps.js"></script>
+    <script src="~/Content/CustomeJS/moment-with-locales.js"></script>
+    <script src="~/Content/CustomeJS/formValidation.min.js"></script>
+    <script src="~/Content/CustomeJS/validationbootstrap.js"></script>
+    <script src="~/Content/CustomeJS/CustomValidation.js"></script>
+   
+    <link href="~/Content/CustomeCSS/bootValidation.css" rel="stylesheet" />
+    <script src="~/Content/CustomeJS/bootstrap-datepicker.js"></script>
+    <link href="~/Content/CustomeCSS/datepicker.css" rel="stylesheet" />
+
+    <style type="text/css">
+        .bs-example {
+            margin: 20px;
+        }
+    </style>
+    <style type="text/css">
+        Adjust the height of section #profileForm .content {
+            min-height: 100px;
+        }
+
+        #profileForm .content > .body {
+            width: 100%;
+            height: auto;
+            padding: 15px;
+            position: relative;
+        }
+    </style>
+    <style type="text/css">
+        /* Place the HTML 5 spinner at the default position */
+        #html5Form .inputContainer .form-control {
+            padding-right: 10px;
+        }
+        /* Adjust feedback icon position */
+        .has-feedback label ~ .form-control-feedback {
+            top: 27px;
+            right: 18px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="content-wrapper">
+        <section class="content-header">
+            <h1>Add New Person</h1>
+            <ol class="breadcrumb">
+                <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+                <li class="active">Add New Person</li>
+            </ol>
+        </section>
+        <div class="bs-example">
+            @using (Html.BeginForm("Person", "Person", FormMethod.Post, new { @id = "profileForm" }))
+            {
+                <h2>Person</h2>
+                <section data-step="0">
+                    <div class="row">
+                        <br />
+                        <fieldset class=" the-fieldset">
+                            <legend class="the-legend">Personal Information</legend>
+                            <div class="col-xs-12 form-group">
+                                <div class="col-xs-4 form-group">
+                                    <label class="control-label"> First Name</label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"></span>
+                                        @Html.TextBoxFor(m => m.PersonViewModel.FirstName, new { @class = "form-control" })
+                                    </div>
+                                </div>
+                                <div class="col-xs-4 form-group">
+                                    <label class="control-label">Last Name</label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"></span>
+
+                                        @Html.TextBoxFor(m => m.PersonViewModel.LastName, new { @class = "form-control" })
+
+                                    </div>
+                                </div>
+                                <div class="col-xs-4 form-group">
+                                    <label class="control-label">Date Of Birth</label>
+                                    <div class="input-group date" >
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+
+                                        @Html.TextBoxFor(m => m.PersonViewModel.DOB,"{0:dd/MM/yyyy}", new { @class = "form-control DOB" })
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 form-group">
+                                <div class="col-xs-4 form-group">
+                                    <label class="control-label"> Spouse First Name</label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"></span>
+
+                                        @Html.TextBoxFor(m => m.PersonViewModel.SpouseFirstName, new { @class = "form-control " })
+                                    </div>
+                                </div>
+                                <div class="col-xs-4 form-group">
+                                    <label class="control-label">Spouse Last Name</label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"></span>
+
+                                        @Html.TextBoxFor(m => m.PersonViewModel.SpouseLastName, new { @class = "form-control" })
+                                    </div>
+                                </div>
+                                <div class="col-xs-4 form-group">
+                                    <label class="control-label">Spouse Date of Birth</label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+
+                                        @Html.TextBoxFor(m => m.PersonViewModel.SpouseDOB,"{0:dd/MM/yyyy}", new { @class = "form-control DOB" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 form-group">
+                                <div class="col-xs-4 form-group">
+                                    <label class="control-label"> Seat </label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"></span>
+                                        
+                                        @Html.DropDownListFor(m => m.PersonViewModel.SeatId, new SelectList(ViewBag.SeatsList, "Value", "Text"), "--Select Seats--", new { @class = "form-control", id = "Seats" })
+
+                                    </div>
+                                </div>
+                                <div class="col-xs-4 form-group">
+                                    <label class="control-label">Equipment</label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"></span>
+                                      
+                                        @Html.DropDownListFor(m => m.PersonViewModel.EquipmentID, new SelectList(ViewBag.EquipmentList, "Value", "Text"), "--Select Equipment--", new { @class = "form-control", id = "Equipment" })
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 form-group">
+                                <div class="col-xs-4 form-group">
+                                    <label class="control-label"> Avg hours flown/month</label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"></span>
+
+                                        @Html.TextBoxFor(m => m.PersonViewModel.AveFlyHours, new { @class = "form-control" })
+                                    </div>
+                                </div>
+                                <div class="col-xs-4 form-group">
+                                    <label class="control-label">Years of credited service</label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"></span>
+
+                                        @Html.TextBoxFor(m => m.PersonViewModel.YearOfCreditService, new { @class = "form-control" })
+                                    </div>
+                                </div>
+                                <div class="col-xs-4 form-group">
+                                    <label class="control-label">Alternate retire date</label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+
+                                        @Html.TextBoxFor(m => m.PersonViewModel.AltRetireDate,"{0:dd/MM/yyyy}", new { @class = "form-control DOB" })
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        @*Contact info filedset*@
+                        <fieldset class=" the-fieldset">
+                            <legend class="the-legend">Contact Information</legend>
+                            <div class="col-xs-12 form-group">
+                                <div class="col-xs-8 form-group">
+                                    <label class="control-label">Address Line 1 </label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"></span>
+
+                                        @Html.TextBoxFor(m => m.AddressViewModel.AddressLine1, new { @class = "form-control" })
+                                    </div>
+                                </div>                             
+                            </div>
+                            <div class="col-xs-12 form-group">
+                                <div class="col-xs-8 form-group">
+                                    <label class="control-label">Address Line 2</label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"></span>
+                                        @Html.TextBoxFor(m => m.AddressViewModel.AddressLine2, new { @class = "form-control" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 form-group">
+                                <div class="col-xs-4 form-group">
+                                    <label class="control-label">State </label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"></span>
+                                        @Html.DropDownListFor(x => x.AddressViewModel.StateId, new SelectList(ViewBag.StateList, "Value", "Text"), "--Select State--", new { @class = "form-control", id = "State" })
+                                    </div>
+                                </div>
+                                <div class="col-xs-4 form-group">
+                                    <label class="control-label">City</label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"></span>
+
+                                        @Html.DropDownListFor(x => x.AddressViewModel.City, new SelectList(ViewBag.CityList, "Value", "Text"), "--Select City--", new { @class = "form-control", id = "City" })
+                                    </div>
+                                </div>
+                                <div class="col-xs-4 form-group">
+                                    <label class="control-label">Zip Code</label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"></span>
+
+                                        @Html.TextBoxFor(m => m.AddressViewModel.ZipCode, new { @class = "form-control" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 form-group">
+                                <div class="col-xs-4 form-group">
+                                    <label class="control-label">Home Phone </label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-phone-alt"></i></span>
+
+                                        @Html.TextBoxFor(m => m.AddressViewModel.HomePhone, new { @class = "form-control" })
+                                    </div>
+                                </div>
+                                <div class="col-xs-4 form-group">
+                                    <label class="control-label">Mobile Phone</label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
+
+                                        @Html.TextBoxFor(m => m.AddressViewModel.MobilePhone, new { @class = "form-control" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 form-group">
+                                <div class="col-xs-4 form-group">
+                                    <label class="control-label">Email Id </label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+
+                                        @Html.TextBoxFor(m => m.AddressViewModel.Email, new { @class = "form-control", type = "email" })
+                                    </div>
+                                </div>
+                                <div class="col-xs-4 form-group">
+                                    <label class="control-label">Fax</label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-print"></i></span>
+
+                                        @Html.TextBoxFor(m => m.AddressViewModel.Fax, new { @class = "form-control" })
+                                    </div>
+                                </div>
+                            </div>
+
+                        </fieldset>
+
+                    </div>
+                </section>
+                <h2>Person Financial</h2>
+                <section data-step="1">
+                    @*@{  Html.RenderPartial("_FinancialPartial", Model.PersonFinancialViewModel);    }*@
+                    <div class="row">
+                        <div class="col-xs-4 form-group">
+                            <label class="control-label">401k balance</label>
+                            <div class="input-group">
+                                <span class="input-group-addon">$</span>
+
+                                @Html.TextBoxFor(m => m.PersonFinancialViewModel.Balance401KAmount, new { @class = "form-control" })
+
+                            </div>
+                        </div>
+                        <div class="col-xs-4 form-group">
+                            <label>Company Contributions</label>
+                            <div class="input-group">
+                                <span class="input-group-addon">%</span>
+
+                                @Html.TextBoxFor(m => m.PersonFinancialViewModel.CompanyContributionAmount, new { @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="col-xs-4 form-group">
+                            <label>Projected return on all investment accounts</label>
+                            <div class="input-group">
+                                <span class="input-group-addon">%</span>
+
+                                @Html.TextBoxFor(m => m.PersonFinancialViewModel.ProjectedRetuPer, new { @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="col-xs-4 form-group">
+                            <label>Other IRA Balances</label>
+                            <div class="input-group">
+                                <span class="input-group-addon">$</span>
+
+                                @Html.TextBoxFor(m => m.PersonFinancialViewModel.OtherIRAbalanceAmount, new { @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="col-xs-4 form-group">
+                            <label>Annual IRA Annual Contributions</label>
+                            <div class="input-group">
+                                <span class="input-group-addon">$</span>
+
+                                @Html.TextBoxFor(m => m.PersonFinancialViewModel.AnnualIRAContributionAmount, new { @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="col-xs-4 form-group">
+                            <label>Taxable Account Balances</label>
+                            <div class="input-group">
+                                <span class="input-group-addon">$</span>
+
+                                @Html.TextBoxFor(m => m.PersonFinancialViewModel.TaxableAccountBal, new { @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="col-xs-4 form-group">
+                            <label>Taxable Account Contributions</label>
+                            <div class="input-group">
+                                <span class="input-group-addon">$</span>
+
+                                @Html.TextBoxFor(m => m.PersonFinancialViewModel.TaxableAccountContributions, new { @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="col-xs-4 form-group">
+                            <label>A Fund Annuity</label>
+                            <div class="input-group">
+                                <span class="input-group-addon">$</span>
+
+                                @Html.TextBoxFor(m => m.PersonFinancialViewModel.FundAnnuityAmount, new { @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="col-xs-4 form-group">
+                            <label>Military Annuity</label>
+                            <div class="input-group">
+                                <span class="input-group-addon">$</span>
+
+                                @Html.TextBoxFor(m => m.PersonFinancialViewModel.MilitaryAnnuity, new { @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="col-xs-4 form-group">
+                            <label>Military Survivor Annuity</label>
+                            <div class="input-group">
+                                <span class="input-group-addon">$</span>
+
+                                @Html.TextBoxFor(m => m.PersonFinancialViewModel.MilitarySurvivorAnnuity, new { @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="col-xs-4 form-group">
+                            <label>Withdrawal rate on retirement assets</label>
+                            <div class="input-group">
+                                <span class="input-group-addon">%</span>
+
+                                @Html.TextBoxFor(m => m.PersonFinancialViewModel.WithdrawRatePer, new { @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="col-xs-4 form-group">
+                            <label>Social Security Full benefit</label>
+                            <div class="input-group">
+                                <span class="input-group-addon">$</span>
+
+                                @Html.TextBoxFor(m => m.PersonFinancialViewModel.SSBeniftAmount, new { @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="col-xs-4 form-group">
+                            <label>Spouse Social Security full benefit</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"></span>
+
+                                @Html.TextBoxFor(m => m.PersonFinancialViewModel.SpouseSSBenifitAmount, new { @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="col-xs-4 form-group">
+                            <label>Projected Social Security age</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"></span>
+
+                                @Html.TextBoxFor(m => m.PersonFinancialViewModel.SSProjAge, new { @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="col-xs-4 form-group">
+                            <label>Projected Spouse Social Security age</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"></span>
+
+                                @Html.TextBoxFor(m => m.PersonFinancialViewModel.SSSpouseProjAge, new { @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="col-xs-4 form-group">
+                            <label>Spouse 401k balance</label>
+                            <div class="input-group">
+                                <span class="input-group-addon">$</span>
+
+                                @Html.TextBoxFor(m => m.PersonFinancialViewModel.Spouse401kBalance, new { @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="col-xs-4 form-group">
+                            <label>spouse IRA balance</label>
+                            <div class="input-group">
+                                <span class="input-group-addon">$</span>
+
+                                @Html.TextBoxFor(m => m.PersonFinancialViewModel.SpouseIRABalance, new { @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="col-xs-4 form-group">
+                            <label>Spouse annual IRA projected contributions</label>
+                            <div class="input-group">
+                                <span class="input-group-addon">$</span>
+
+                                @Html.TextBoxFor(m => m.PersonFinancialViewModel.SpouseAnnualIRAProjAmount, new { @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="col-xs-4 form-group">
+                            <label>Spouse Annuity</label>
+                            <div class="input-group">
+                                <span class="input-group-addon">$</span>
+
+                                @Html.TextBoxFor(m => m.PersonFinancialViewModel.SpouseAnnuityAmount, new { @class = "form-control" })
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <h2>Financial Equipment</h2>
+                <section data-step="1"></section>
+            }
+            @*</form>*@
+
+        </div>
+    </div>
+    <script>
+        //$(document).ready(function () {
+        //    function adjustIframeHeight() {
+        //        var $body = $('body'),
+        //            $iframe = $body.data('iframe.fv');
+        //        if ($iframe) {
+        //            // Adjust the height of iframe
+        //            $iframe.height($body.height());
+        //        }
+        //    }
+
+
+        //    // IMPORTANT: You must call .steps() before calling .formValidation()
+        //    $('#profileForm')
+        //        .steps({
+        //            headerTag: 'h2',
+        //            bodyTag: 'section',
+        //            onStepChanged: function (e, currentIndex, priorIndex) {
+        //                // You don't need to care about it
+        //                // It is for the specific demo
+        //                adjustIframeHeight();
+        //            },
+        //            // Triggered when clicking the Previous/Next buttons
+        //            onStepChanging: function (e, currentIndex, newIndex) {
+        //                var fv = $('#profileForm').data('formValidation'), // FormValidation instance
+        //                    // The current step container
+        //                    $container = $('#profileForm').find('section[data-step="' + currentIndex + '"]');
+
+        //                // Validate the container
+        //                fv.validateContainer($container);
+
+        //                var isValidStep = fv.isValidContainer($container);
+        //                if (isValidStep === false || isValidStep === null) {
+        //                    // Do not jump to the next step
+        //                    return false;
+        //                }
+
+        //                return true;
+        //            },
+        //            // Triggered when clicking the Finish button
+        //            onFinishing: function (e, currentIndex) {
+        //                var fv = $('#profileForm').data('formValidation'),
+        //                    $container = $('#profileForm').find('section[data-step="' + currentIndex + '"]');
+
+        //                // Validate the last step container
+        //                fv.validateContainer($container);
+
+        //                var isValidStep = fv.isValidContainer($container);
+        //                if (isValidStep === false || isValidStep === null) {
+        //                    return false;
+        //                }
+
+        //                return true;
+        //            },
+        //            onFinished: function (e, currentIndex) {
+        //                // Uncomment the following line to submit the form using the defaultSubmit() method
+        //                $('#profileForm').formValidation('defaultSubmit');
+
+        //                // For testing purpose
+        //                //$('#welcomeModal').modal();
+        //            }
+        //        })
+        //        .formValidation({
+        //            framework: 'bootstrap',
+        //            icon: {
+        //                valid: 'glyphicon glyphicon-ok',
+        //                invalid: 'glyphicon glyphicon-remove',
+        //                validating: 'glyphicon glyphicon-refresh'
+        //            },
+        //            // This option will not ignore invisible fields which belong to inactive panels
+        //            excluded: ':disabled',
+        //            fields: {
+
+        //                'PersonViewModel.FirstName': {
+        //                    //row: '.col-xs-4',
+        //                    validators: {
+        //                        notEmpty: {
+        //                            message: 'The first name is required'
+        //                        },
+        //                        regexp: {
+        //                            regexp: /^[a-zA-Z\s]+$/,
+        //                            message: 'The first name can only consist of alphabetical and space'
+        //                        }
+        //                    }
+        //                },
+        //                'PersonViewModel.LastName': {
+        //                    //row: '.col-xs-4',
+        //                    validators: {
+        //                        notEmpty: {
+        //                            message: 'The last name is required'
+        //                        },
+        //                        regexp: {
+        //                            regexp: /^[a-zA-Z\s]+$/,
+        //                            message: 'The last name can only consist of alphabetical and space'
+        //                        }
+        //                    }
+        //                },
+
+        //                'PersonViewModel.DOB': {
+        //                    row: '.col-xs-4',
+        //                    validators: {
+        //                        notEmpty: {
+        //                            message: 'The birthday is required'
+        //                        },
+        //                        date: {
+        //                            format: 'YYYY/MM/DD',
+        //                            message: 'The birthday is not valid'
+        //                        }
+        //                    }
+        //                },
+        //                SeatId: {
+        //                    row: '.col-xs-4',
+        //                    validators: {
+        //                        notEmpty: {
+        //                            message: 'The Seat Id is required'
+        //                        }
+        //                    }
+        //                },
+        //                EquipmentID: {
+        //                    row: '.col-xs-4',
+        //                    validators: {
+        //                        notEmpty: {
+        //                            message: 'The Equipment Id is required'
+        //                        }
+        //                    }
+        //                },
+        //                'PersonViewModel.AveFlyHours': {
+        //                    row: '.col-xs-4',
+        //                    validators: {
+        //                        notEmpty: {
+        //                            message: 'The AveFlyHours is required'
+        //                        },
+        //                        regexp: {
+        //                            regexp: /^\d+$/i,
+        //                            message: 'AveFlyHours should be Number'
+        //                        }
+        //                    }
+        //                },
+        //                'AddressViewModel.AddressLine1': {
+        //                    row: '.col-xs-8',
+        //                    validators: {
+        //                        notEmpty: {
+        //                            message: 'The AddressLine1 is required'
+        //                        }
+        //                    }
+        //                },
+        //                'AddressViewModel.City': {
+        //                    row: '.col-xs-4',
+        //                    validators: {
+        //                        notEmpty: {
+        //                            message: 'The City is required'
+        //                        }
+        //                    }
+        //                },
+        //                'AddressViewModel.StateId': {
+        //                    row: '.col-xs-4',
+        //                    validators: {
+        //                        notEmpty: {
+        //                            message: 'The State Id is required'
+        //                        }
+        //                    }
+        //                },
+        //                'AddressViewModel.ZipCode': {
+        //                    row: '.col-xs-4',
+        //                    validators: {
+        //                        notEmpty: {
+        //                            message: 'The Zip Code is required'
+        //                        },
+        //                        regexp: {
+        //                            regexp: /^\d{5}(-\d{4})?$/i,
+        //                            message: 'Zip Code is not valid'
+        //                        }
+        //                    }
+        //                },
+        //                'AddressViewModel.HomePhone': {
+        //                    row: '.col-xs-4',
+        //                    validators: {
+
+        //                        regexp: {
+        //                            regexp: /^[0-9]{3}-[0-9]{3}-[0-9]{4}$/i,
+        //                            message: 'Home Phone is not valid'
+        //                        }
+        //                    }
+        //                },
+        //                'AddressViewModel.MobilePhone': {
+        //                    row: '.col-xs-4',
+        //                    validators: {
+        //                        notEmpty: {
+        //                            message: 'The Mobile Phone is required'
+        //                        },
+        //                        regexp: {
+        //                            regexp: /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/i,
+        //                            message: 'Mobile Phone is not valid'
+        //                        }
+        //                    }
+        //                },
+        //                'AddressViewModel.Email': {
+        //                    row: '.col-xs-4',
+        //                    validators: {
+        //                        notEmpty: {
+        //                            message: 'The Email is required'
+        //                        }
+
+        //                    }
+        //                },
+        //                'AddressViewModel.Fax': {
+        //                    row: '.col-xs-4',
+        //                    validators: {
+
+        //                        regexp: {
+        //                            regexp: /^\d{5}(-\d{4})?$/i,
+        //                            message: 'Fax is not valid'
+        //                        }
+        //                    }
+        //                },
+
+        //                //////////PersonFinancial Validation Field
+        //                'PersonFinancialViewModel.Balance401KAmount': {
+        //                    row: '.col-xs-4',
+        //                    validators: {
+        //                        notEmpty: {
+        //                            message: 'The Balance 401K Amount is required'
+        //                        },
+        //                        regexp: {
+        //                            regexp: /^\d+(\.\d{1,2})?$/i,
+        //                            message: 'Balance 401K Amount is not valid'
+        //                        }
+        //                    }
+        //                },
+        //                'PersonFinancialViewModel.CompanyContributionAmount': {
+        //                    row: '.col-xs-4',
+        //                    validators: {
+        //                        notEmpty: {
+        //                            message: 'The Company Contribution Amount is required'
+        //                        },
+        //                        regexp: {
+        //                            regexp: /^\d+(\.\d{1,2})?$/i,
+        //                            message: 'Company Contribution Amount is not valid'
+        //                        }
+        //                    }
+        //                },
+        //                'PersonFinancialViewModel.ProjectedRetuPer': {
+        //                    row: '.col-xs-4',
+        //                    validators: {
+        //                        notEmpty: {
+        //                            message: 'The Projected Return Amount is required'
+        //                        },
+        //                        regexp: {
+        //                            regexp: /^\d+(\.\d{1,2})?$/i,
+        //                            message: 'Projected Return Amount is not valid'
+        //                        }
+        //                    }
+        //                },
+        //                'PersonFinancialViewModel.OtherIRAbalanceAmount': {
+        //                    row: '.col-xs-4',
+        //                    validators: {
+        //                        notEmpty: {
+        //                            message: 'The Other IRA balance Amount is required'
+        //                        },
+        //                        regexp: {
+        //                            regexp: /^\d+(\.\d{1,2})?$/i,
+        //                            message: 'Other IRA balance Amount is not valid'
+        //                        }
+        //                    }
+        //                },
+        //                'PersonFinancialViewModel.AnnualIRAContributionAmount': {
+        //                    row: '.col-xs-4',
+        //                    validators: {
+        //                        notEmpty: {
+        //                            message: 'The Annual IRA Contribution Amount is required'
+        //                        },
+        //                        regexp: {
+        //                            regexp: /^\d+(\.\d{1,2})?$/i,
+        //                            message: 'Annual IRA Contribution Amount is not valid'
+        //                        }
+        //                    }
+        //                },
+        //                'PersonFinancialViewModel.FundAnnuityAmount': {
+        //                    row: '.col-xs-4',
+        //                    validators: {
+        //                        notEmpty: {
+        //                            message: 'The Fund Annuity Amount is required'
+        //                        },
+        //                        regexp: {
+        //                            regexp: /^\d+(\.\d{1,2})?$/i,
+        //                            message: 'Fund Annuity Amount is not valid'
+        //                        }
+        //                    }
+        //                },
+        //                'PersonFinancialViewModel.WithdrawRatePer': {
+        //                    row: '.col-xs-4',
+        //                    validators: {
+        //                        notEmpty: {
+        //                            message: 'The Withdraw Rate is required'
+        //                        },
+        //                        regexp: {
+        //                            regexp: /^\d+(\.\d{1,2})?$/i,
+        //                            message: 'Withdraw Rate is not valid'
+        //                        }
+        //                    }
+        //                },
+        //                'PersonFinancialViewModel.SSBeniftAmount': {
+        //                    row: '.col-xs-4',
+        //                    validators: {
+        //                        notEmpty: {
+        //                            message: 'The Security Benift Amount is required'
+        //                        },
+        //                        regexp: {
+        //                            regexp: /^\d+(\.\d{1,2})?$/i,
+        //                            message: 'Security Benift Amount is not valid'
+        //                        }
+        //                    }
+        //                },
+        //                'PersonFinancialViewModel.SpouseSSBenifitAmount': {
+        //                    row: '.col-xs-4',
+        //                    validators: {
+        //                        notEmpty: {
+        //                            message: 'The Spouse Social Security Benifit  is required'
+        //                        },
+        //                        regexp: {
+        //                            regexp: /^\d+(\.\d{1,2})?$/i,
+        //                            message: 'Spouse Social Security Benifit is not valid'
+        //                        }
+        //                    }
+        //                },
+        //                'PersonFinancialViewModel.SSProjAge': {
+        //                    row: '.col-xs-4',
+        //                    validators: {
+        //                        notEmpty: {
+        //                            message: 'The Projected Social Security age is required'
+        //                        },
+        //                        regexp: {
+        //                            regexp: /^\d+(\.\d{1,2})?$/i,
+        //                            message: 'Projected Social Security age is not valid'
+        //                        }
+        //                    }
+        //                },
+        //                'PersonFinancialViewModel.SSProjAge': {
+        //                    row: '.col-xs-4',
+        //                    validators: {
+        //                        notEmpty: {
+        //                            message: 'The Projected Social Security age is required'
+        //                        },
+        //                        regexp: {
+        //                            regexp: /^\d+(\.\d{1,2})?$/i,
+        //                            message: 'Projected Social Security age is not valid'
+        //                        }
+        //                    }
+        //                },
+        //                'PersonFinancialViewModel.SSSpouseProjAge': {
+        //                    row: '.col-xs-4',
+        //                    validators: {
+        //                        notEmpty: {
+        //                            message: 'The Projected Spouse Social Security age is required'
+        //                        },
+        //                        regexp: {
+        //                            regexp: /^\d+(\.\d{1,2})?$/i,
+        //                            message: 'Projected Spouse Social Security age is not valid'
+        //                        }
+        //                    }
+        //                },
+        //                'PersonFinancialViewModel.Spouse401kBalance': {
+        //                    row: '.col-xs-4',
+        //                    validators: {
+        //                        notEmpty: {
+        //                            message: 'The Spouse 401k balance is required'
+        //                        },
+        //                        regexp: {
+        //                            regexp: /^\d+(\.\d{1,2})?$/i,
+        //                            message: 'Spouse 401k balance is not valid'
+        //                        }
+        //                    }
+        //                },
+        //                'PersonFinancialViewModel.SpouseIRABalance': {
+        //                    row: '.col-xs-4',
+        //                    validators: {
+        //                        notEmpty: {
+        //                            message: 'The spouse IRA balance is required'
+        //                        },
+        //                        regexp: {
+        //                            regexp: /^\d+(\.\d{1,2})?$/i,
+        //                            message: 'spouse IRA balance is not valid'
+        //                        }
+        //                    }
+        //                },
+        //                'PersonFinancialViewModel.SpouseAnnualIRAProjAmount': {
+        //                    row: '.col-xs-4',
+        //                    validators: {
+        //                        notEmpty: {
+        //                            message: 'The Spouse annual IRA projected is required'
+        //                        },
+        //                        regexp: {
+        //                            regexp: /^\d+(\.\d{1,2})?$/i,
+        //                            message: 'Spouse annual IRA projected is not valid'
+        //                        }
+        //                    }
+        //                },
+        //                'PersonFinancialViewModel.SpouseAnnuityAmount': {
+        //                    row: '.col-xs-4',
+        //                    validators: {
+        //                        notEmpty: {
+        //                            message: 'The Spouse Annuity is required'
+        //                        },
+        //                        regexp: {
+        //                            regexp: /^\d+(\.\d{1,2})?$/i,
+        //                            message: 'Spouse Annuity is not valid'
+        //                        }
+        //                    }
+        //                }
+
+
+        //            }
+        //        });
+        //});
+    </script>
+
+  <script>
+        $(document).ready(function () {
+            $("#State").change(function () {
+
+
+
+                var StateId = $("#State").val();
+
+
+                var myUrl = '@Url.Action("GetCityByStateId", "Person")';
+                $.ajax({
+                    url: myUrl,
+                    type: 'POST',
+                    dataType: "json",
+                    data: { 'StateId': StateId },
+                    success: function (d) {
+                        $("#City").find("option").remove();
+                        // $("#City").find("option:gt(0)").remove();
+                        if (d.length > 0) {
+                            for (var i = 0; i < d.length; i++) {
+                                $("#City").append($('<option>', {
+                                    value: d[i].CityId,
+                                    text: d[i].Name
+                                }));
+
+                            }
+                        }
+
+
+                    },
+                    error: function () {
+                        alert('failure');
+                    }
+                });
+
+
+
+
+
+
+
+
+
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        $(function () {
+            $('.DOB').datepicker({ format: "dd/mm/yyyy" });
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+﻿@*Added by YReddy on 12/10/2015*@
+@model List<AACalc.Entity.ViewModel.MenuViewModel>
+<ul class="sidebar-menu">
+    @{
+        foreach (var menu in Model)
+        {
+            <li>
+                <a href="@menu.URL" title="@menu.MenuName">
+                    <i class="@menu.CssClass"></i>
+                    <span>@menu.MenuName</span>
+                </a>
+            </li>
+
+        }
+    }
+</ul>

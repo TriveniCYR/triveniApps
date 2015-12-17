@@ -1,0 +1,37 @@
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.BAL\bin\Debug\AACalc.BAL.dll
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.BAL\bin\Debug\AACalc.BAL.pdb
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.BAL\obj\Debug\AACalc.BAL.dll
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.BAL\obj\Debug\AACalc.BAL.pdb
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.BAL\obj\Debug\AACalc.BusinessLayer.csprojResolveAssemblyReference.cache
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.BAL\bin\Debug\AACalc.Common.dll
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.BAL\bin\Debug\AACalc.DAL.dll
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.BAL\bin\Debug\AACalc.Entity.dll
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.BAL\bin\Debug\EntityFramework.dll
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.BAL\bin\Debug\AACalc.Common.pdb
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.BAL\bin\Debug\AACalc.DAL.pdb
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.BAL\bin\Debug\AACalc.Entity.pdb
+G:\YallaReddy\AACalculator\AACalc.Web\AACalc.BAL\bin\Debug\EntityFramework.xml
+E:\Live workspace\NEW AACalcuator\AACalc.Web\AACalc.BAL\obj\Debug\AACalc.BusinessLayer.csprojResolveAssemblyReference.cache
+E:\Live workspace\NEW AACalcuator\AACalc.Web\AACalc.BAL\bin\Debug\AACalc.BAL.dll
+E:\Live workspace\NEW AACalcuator\AACalc.Web\AACalc.BAL\bin\Debug\AACalc.BAL.pdb
+E:\Live workspace\NEW AACalcuator\AACalc.Web\AACalc.BAL\bin\Debug\AACalc.Common.dll
+E:\Live workspace\NEW AACalcuator\AACalc.Web\AACalc.BAL\bin\Debug\AACalc.DAL.dll
+E:\Live workspace\NEW AACalcuator\AACalc.Web\AACalc.BAL\bin\Debug\AACalc.Entity.dll
+E:\Live workspace\NEW AACalcuator\AACalc.Web\AACalc.BAL\bin\Debug\AACalc.Common.pdb
+E:\Live workspace\NEW AACalcuator\AACalc.Web\AACalc.BAL\bin\Debug\AACalc.DAL.pdb
+E:\Live workspace\NEW AACalcuator\AACalc.Web\AACalc.BAL\bin\Debug\AACalc.Entity.pdb
+E:\Live workspace\NEW AACalcuator\AACalc.Web\AACalc.BAL\obj\Debug\AACalc.BAL.dll
+E:\Live workspace\NEW AACalcuator\AACalc.Web\AACalc.BAL\obj\Debug\AACalc.BAL.pdb
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.BAL\bin\Debug\AACalc.BAL.dll
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.BAL\bin\Debug\AACalc.BAL.pdb
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.BAL\bin\Debug\AACalc.Common.dll
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.BAL\bin\Debug\AACalc.DAL.dll
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.BAL\bin\Debug\AACalc.Entity.dll
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.BAL\bin\Debug\EntityFramework.dll
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.BAL\bin\Debug\AACalc.Common.pdb
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.BAL\bin\Debug\AACalc.DAL.pdb
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.BAL\bin\Debug\AACalc.Entity.pdb
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.BAL\bin\Debug\EntityFramework.xml
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.BAL\obj\Debug\AACalc.BusinessLayer.csprojResolveAssemblyReference.cache
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.BAL\obj\Debug\AACalc.BAL.dll
+G:\Projects\TriveniProjects\AACalc.Web\AACalc.BAL\obj\Debug\AACalc.BAL.pdb

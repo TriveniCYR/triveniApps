@@ -1,0 +1,88 @@
+﻿@model List<AACalc.Entity.ViewModel.PersonViewModel>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap Tabs</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.10/css/dataTables.bootstrap.min.css">
+    <style type="text/css">
+        .bs-example {
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+            <h1>
+                All Persons
+            </h1>
+            <ol class="breadcrumb">
+                <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+                <li><a href="#">All Persons</a></li>
+            </ol>
+        </section>
+        @*@RenderSection("featured", required: false)*@
+
+        <!-- Main content -->
+        <section class="content">
+            <div class="row" style="width: 15%; padding: 5px 0px 20px 15px;">
+                <button type="button" id="addNewPerson" class="btn btn-block btn-primary btn-lg" onclick="window.location = '/Person/Person';">Add a Person</button>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="box">
+                        <!-- /.box-header -->
+                        <div class="box-body">
+                            <table id="personsList" class="table table-bordered table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Details</th>
+                                        <th>First Name</th>
+                                        <th>Last Name</th>
+                                        <th>DOB</th>
+                                        <th>Home Phone</th>
+                                        <th>Mobile Phone</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var person in Model)
+                                    {
+                                        <tr>
+                                            <td><a href="Details/@person.PersonId">Details</a></td>
+                                            <td>@person.FirstName</td>
+                                            <td>@person.LastName </td>
+                                            <td>@person.DOB.ToShortDateString()</td>
+                                            <td>@person.HomePhone</td>
+                                            <td>@person.MobilePhone</td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- /.box-body -->
+                    </div>
+                    <!-- /.box -->
+                </div>
+                <!-- /.col -->
+            </div>
+            <!-- /.row -->
+        </section>
+        <!-- /.content -->
+    </div>
+
+    <script src="https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.10/js/dataTables.bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#personsList').DataTable();
+        });
+    </script>
+</body>
+
+
+</html>   
